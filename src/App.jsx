@@ -7,25 +7,21 @@ const hasCustomer = true;
 
 const App = () => {
 
-  const renderShowHistory = () => {
-    return (
+  const renderShowHistory = (
       <div>
         Clique no botão abaixo para visualizar o histórico de clientes
         <br />
         {buttonA}
       </div>
       ) 
-  }
 
-  const renderAddCustomer = () => {
-    return (
+  const renderAddCustomer = (
       <div>
         Clique abaixo para cadastrar o cliente
         <br />
         {buttonB}
       </div>
     )
-  }
 
   const customer = 'Toti Cavalcanti'
 
@@ -44,7 +40,7 @@ const App = () => {
     <div>
       <p>Código Fluente</p>
       <p>Seja bem-vindo</p>
-      { hasCustomer ? renderShowHistory() : renderAddCustomer()}
+      { hasCustomer ? renderShowHistory : renderAddCustomer}
       <div>
         {showCustomer()}
       </div>
