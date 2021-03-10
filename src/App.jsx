@@ -1,38 +1,47 @@
 import React from 'react';
 
-const buttonA = <button>Histórico de Clientes</button>
-const buttonB =  <button>Cadastrar Cliente</button>
+const listCustomers = [
+  {
+    id: 1,
+    name: 'Toti Cavalcanti',
+    skills: ['React', 'Node', 'Python', 'Django']
+  },
+  {
+    id: 2,
+    name: 'Walter de Lucca Junior',
+    skills: ['C', 'C++', 'React', 'Angular']
+  },
+  {
+    id: 3,
+    name: 'Carlos Augusto de Souza',
+    skills: ['Webpack', 'Java', 'React Native', 'Angular']
+  },
+  {
+    id: 14,
+    name: 'Elisabeth Gonçalves',
+    skills: ['R', 'elixir', 'React', 'Angular']
+  },
 
-const hasCustomer = true;
+]
 
 const App = () => {
 
-  const renderShowHistory = (
-      <div>
-        Clique no botão abaixo para visualizar o histórico de clientes
-        <br />
-        {buttonA}
-      </div>
-      ) 
+  const renderCustomers = (customer, index) => {
 
-  const renderAddCustomer = (
-      <div>
-        Clique abaixo para cadastrar o cliente
-        <br />
-        {buttonB}
+    return (
+      <div key={`customer-${customer.id}`}>
+        <li>{ customer.name }</li>
+        {customer.skills.map(renderSkills)}
       </div>
     )
+  }
 
-  const customer = 'Toti Cavalcanti'
-
-  const showCustomer = () => {
-    if(!hasCustomer) return null;
-    return(
-      <div>
-        <h1>
-          Nome do cliente: {customer}
-        </h1>
+  const renderSkills = (skill, index) => {
+    return (
+      <div style={{paddingLeft: '30px'}}>
+        <li key={`skill-${index}`}>{ skill }</li>
       </div>
+
     )
   }
 
@@ -40,12 +49,9 @@ const App = () => {
     <div>
       <p>Código Fluente</p>
       <p>Seja bem-vindo</p>
-      { hasCustomer ? renderShowHistory : renderAddCustomer}
-      <div>
-        {showCustomer()}
-      </div>
+      <div>{listCustomers.map(renderCustomers)}</div>
     </div>
   );
-};
+} ;
 
 export default App;
