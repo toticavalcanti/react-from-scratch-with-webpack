@@ -26,7 +26,7 @@ const listCustomers = [
 
 const App = () => {
 
-  const renderCustomers = (customer, index) => {
+  const renderCustomers = (customer) => {
 
     return (
       <div key={`customer-${customer.id}`}>
