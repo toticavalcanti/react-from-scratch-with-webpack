@@ -1,11 +1,15 @@
 import React from 'react';
-import Button from './Button';
+
+const buttonA = <button>Primeiro Botão</button>
+const buttonB =  <button>Segundo Botão</button>
+
 const App = () => {
   return (
     <div>
       <p>Código Fluente</p>
       <p>Seja bem-vindo</p>
-      <Button />
+      {buttonA}
+      {buttonB}
     </div>
   );
 };

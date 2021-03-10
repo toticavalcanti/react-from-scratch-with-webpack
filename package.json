@@ -6,10 +6,10 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start:dev": "webpack serve --port 8081",
+    "start": "webpack serve --open --hot --mode development --port 8081",
     "eslint": "eslint ./src/*.js"
   },
-  "keywords": [],
+  "keywords": [], 
   "author": "Toti Cavalcanti",
   "license": "ISC",
   "devDependencies": {
