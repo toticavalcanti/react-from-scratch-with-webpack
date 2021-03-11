@@ -9,7 +9,7 @@
     "start": "webpack serve --open --hot --mode development --port 8081",
     "eslint": "eslint ./src/*.js"
   },
-  "keywords": [], 
+  "keywords": [],
   "author": "Toti Cavalcanti",
   "license": "ISC",
   "devDependencies": {
